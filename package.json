@@ -12,9 +12,12 @@
     "moment": "^2.24.0",
     "postcss-cli": "^7.1.0",
     "react": "^16.13.1",
+    "react-circular-progressbar": "^2.0.3",
     "react-dom": "^16.13.1",
+    "react-fade-in": "^0.1.8",
     "react-moment": "^0.9.7",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.3.0"
   },
   "scripts": {
     "build:style": "tailwindcss build src/styles/index.css -o src/styles/tailwind.css",

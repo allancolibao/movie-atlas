@@ -8,7 +8,7 @@ function Content(props){
 
     return (
         <div className="container mx-auto flex flex-col md:flex-row items-center xl:pb-16 xl:px-0 px-4 pt-4 md:pt-16">
-            <Overview overview={props.content} />
+            <Overview overview={props.content} genre={props.genre}/>
             <Poster poster={poster_path}/>
         </div>
     );     
