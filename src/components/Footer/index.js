@@ -4,7 +4,7 @@ function Footer(){
     return (
     <React.Fragment>
         <div className="flex min-h-full bg-black bg-no-repeat bg-center bg-cover p-2 md:p-0 text-gray-600">
-            <div className="container mt-4 mb-8 md:mb-20 mx-auto border-t-2 border-gray-900 pt-2 md:pt-6">
+            <div className="container mt-4 mb-8 md:mb-20 mx-auto z-20 border-t-2 border-gray-900 pt-2 md:pt-6">
                 <div className="sm:flex mb-4">
                     <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">
                         <h1 className="text-gray-400 mb-2">Visit me</h1>

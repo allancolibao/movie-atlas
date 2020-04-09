@@ -14,6 +14,7 @@ function UpcomingMovies(props){
             <div className="flex flex-wrap">
                 {movies.slice(0, 12).map((movie, i) => 
                     <div className="w-auto p-0 w-1/4 lg:w-1/6 cursor-pointer relative" key={i} >
+                        <a href={'/movie/' + movie.id}>
                         <div className="overflow-hidden  shadow-lg">
                             <img className="w-full" src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} alt="Movie Cover"/>
                         </div>
@@ -27,6 +28,7 @@ function UpcomingMovies(props){
                                 </h2>
                             </div>
                         </div>
+                        </a>
                     </div>
                 )}
             </div>

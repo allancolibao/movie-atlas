@@ -1,16 +1,16 @@
 import React from 'react';
 import Moment from 'react-moment';
 
-function PopularMovies(props){
+function SimilarMovies(props){
   
-    const movies = props.movies;
+    const movies = props.similarMovies;
     const style = {backgroundColor: "#000000c4"};
     const genresList = props.genre.genres;
 
     return (
     <div className="flex min-h-full bg-black bg-no-repeat bg-center bg-cover p-2 md:p-0">
-         <div className="container mt-12 md:mt-2 mx-auto z-20">
-            <h1 className="text-2xl md:text-4xl font-weight-bolder mb-1 text-red-600 whitespace-normal">Popular Movies</h1>
+         <div className="container mb-4 mt-12 md:mt-2 mx-auto z-20">
+            <h1 className="text-2xl md:text-4xl font-weight-bolder mb-1 text-red-600 whitespace-normal">More like this</h1>
             <div className="flex flex-wrap">
                 {movies.slice(0, 12).map((movie, i) => 
                     <div className="w-auto p-0 w-1/4 lg:w-1/6 cursor-pointer relative" key={i} >
@@ -39,4 +39,4 @@ function PopularMovies(props){
     );     
   };
 
-export default PopularMovies;
+export default SimilarMovies;
