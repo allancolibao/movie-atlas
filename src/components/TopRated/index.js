@@ -10,7 +10,7 @@ function TopRated(props){
     return (
     <div className="flex min-h-full bg-black bg-no-repeat bg-center bg-cover p-2 md:p-0">
          <div className="container mt-4 mx-auto z-20">
-            <h1 className="text-2xl md:text-4xl font-weight-bolder mb-1 text-red-600 whitespace-normal">Top Rated</h1>
+            <h1 className="text-2xl md:text-4xl font-weight-bolder mb-1 text-orange-600 whitespace-normal">Top Rated</h1>
             <div className="flex flex-wrap">
                 {movies.slice(0, 12).map((movie, i) => 
                     <div className="w-auto p-0 w-1/4 lg:w-1/6 cursor-pointer relative" key={i} >

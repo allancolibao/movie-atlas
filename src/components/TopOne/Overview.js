@@ -10,7 +10,7 @@ function Overview(props){
     const rating = vote_average * 10;
     const styles = {
           path: {
-            stroke: `#ff3729`,
+            stroke: `#dd6b20`,
             strokeLinecap: 'round',
             transition: 'stroke-dashoffset 0.5s ease 0s',
             transform: 'rotate(0.25turn)',
@@ -48,7 +48,7 @@ function Overview(props){
             </div>
             <p className="text-xs sm:text-base">{overview}</p>
               <a href={"movie/trailer/" + id } className="xl:mt-4 mt-8 mb-8 flex xl:flex">
-                <button className=" px-4 lg:px-8 rounded bg-red-600 w-full absolute md:relative text-white font-bold p-2 lg:p-4 uppercase border-red-600 border-t border-b border-r"><i className="fa fa-play"></i> Watch Trailer</button>
+                <button className=" px-4 lg:px-8 rounded bg-orange-600 w-full absolute md:relative text-white font-bold p-2 lg:p-4 uppercase border-orange-600 border-t border-b border-r"><i className="fa fa-play"></i> Watch Trailer</button>
               </a>
         </div>
     );     

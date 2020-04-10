@@ -8,7 +8,7 @@ function CastAndCrew(props){
     return (
         <div className="flex min-h-full bg-black bg-no-repeat bg-center bg-cover p-2 md:p-0">
              <div className="container mt-12 md:mt-2 mx-auto z-20">
-                <h1 className="text-2xl md:text-4xl font-weight-bolder mb-1 text-red-600 whitespace-normal">Top Cast</h1>
+                <h1 className="text-2xl md:text-4xl font-weight-bolder mb-1 text-orange-600 whitespace-normal">Top Cast</h1>
                 <div className="flex flex-wrap">
                     {casts.slice(0, 12).map((cast, i) => 
                         <div className="w-auto p-1 w-1/4 lg:w-1/6 cursor-pointer relative" key={i} >
@@ -28,7 +28,7 @@ function CastAndCrew(props){
                         </div>
                     )}
                 </div>
-                <a  href={"/movie/full-cast-crew/" + props.castAndCrew.id}className="text-base md:text-lg font-weight-bolder text-red-600 hover:text-red-700 whitespace-normal">See Full Cast and Crew >></a>
+                <a  href={"/movie/full-cast-crew/" + props.castAndCrew.id}className="text-base md:text-lg font-weight-bolder text-orange-600 hover:text-orange-700 whitespace-normal">See Full Cast and Crew >></a>
             </div>
         </div>
     );   

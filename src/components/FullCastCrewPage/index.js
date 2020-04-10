@@ -14,7 +14,7 @@ function FullCastCrewPage(props){
             <h1 className="pl-4 md:p-0 text-3xl md:text-4xl font-weight-bolder mb-1 text-white whitespace-normal">{title}</h1>
             <div className="flex text-white pl-4 md:p-2">
                 <div className="w-1/2">
-                    <h1 className="md:p-0 text-2xl md:text-3xl font-weight-bolder mb-1 text-red-600 whitespace-normal">Cast</h1>
+                    <h1 className="md:p-0 text-2xl md:text-3xl font-weight-bolder mb-1 text-orange-600 whitespace-normal">Cast</h1>
                         {casts.map((cast, i) => 
                             <div key={i}>
                                <img className="w-12 md:w-16 rounded" src={cast.profile_path ? 'https://image.tmdb.org/t/p/w500' + cast.profile_path : process.env.PUBLIC_URL + '/img/alt.jpg'} alt="No Profile pic"/>
@@ -25,7 +25,7 @@ function FullCastCrewPage(props){
                         )}
                 </div>
                 <div className="w-1/2">
-                    <h1 className="md:p-0 text-2xl md:text-3xl font-weight-bolder mb-1 text-red-600 whitespace-normal">Crew</h1>
+                    <h1 className="md:p-0 text-2xl md:text-3xl font-weight-bolder mb-1 text-orange-600 whitespace-normal">Crew</h1>
                         {crews.map((crew, i) => 
                             <div key={i}>
                                 <img className="w-12 md:w-16 rounded" src={crew.profile_path ? 'https://image.tmdb.org/t/p/w500' + crew.profile_path : process.env.PUBLIC_URL + '/img/alt.jpg'} alt="No Profile pic"/>
