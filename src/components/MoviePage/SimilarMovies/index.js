@@ -9,14 +9,14 @@ function SimilarMovies(props){
 
     return (
     <div className="flex min-h-full bg-black bg-no-repeat bg-center bg-cover p-2 md:p-0">
-         <div className="container mb-4 mt-12 md:mt-2 mx-auto z-20">
+         <div className="container mb-4 mt-1 md:mt-6 mx-auto z-20">
             <h1 className="text-2xl md:text-4xl font-weight-bolder mb-1 text-red-600 whitespace-normal">More like this</h1>
             <div className="flex flex-wrap">
                 {movies.slice(0, 12).map((movie, i) => 
                     <div className="w-auto p-0 w-1/4 lg:w-1/6 cursor-pointer relative" key={i} >
                         <a href={'/movie/' + movie.id}>
                         <div className="overflow-hidden  shadow-lg">
-                            <img className="w-full" src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} alt="Movie Cover"/>
+                            <img className="w-full" src={movie.poster_path ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path : process.env.PUBLIC_URL + '/img/movie-alt.jpg'} alt="Movie Cover"/>
                         </div>
                         
                             <div className="overlay hidden md:block absolute top-0 bottom-0 right-0 left-0 w-full h-full opacity-0  transition duration-500 ease-in-out hover:opacity-100" style={style}>

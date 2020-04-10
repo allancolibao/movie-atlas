@@ -62,7 +62,7 @@ function Footer(){
         </div>
         <div className="bg-black">
             <div className="border-t-2 border-gray-900 flex flex-col items-center">
-                <div className="sm:w-2/3 text-center py-6">
+                <div className="sm:w-2/3 z-20 text-center py-6">
                     <p className="text-sm text-red-600 font-bold mb-2">
                        Made with &#x2764; by Allan Colibao | 2020
                     </p>

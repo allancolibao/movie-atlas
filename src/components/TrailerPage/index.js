@@ -7,8 +7,6 @@ function TrailerPage(props){
     const videos = props.videos;
     const { title } = props.movieDetails 
 
-    console.log(videos)
-
     return (
         <div className="flex h-full pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover ">
         <Backdrop movieDetails={props.movieDetails}/>
