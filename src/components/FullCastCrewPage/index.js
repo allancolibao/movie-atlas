@@ -3,7 +3,7 @@ import Backdrop from './Backdrop';
 
 function FullCastCrewPage(props){
 
-    const { title } = props.movieDetails;
+    const { title, id } = props.movieDetails;
     const casts = props.castAndCrew.cast;
     const crews = props.castAndCrew.crew;
 
@@ -11,7 +11,9 @@ function FullCastCrewPage(props){
         <div className="flex h-full pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover ">
         <Backdrop movieDetails={props.movieDetails}/>
          <div className="container mt-2  mx-auto z-20">
-            <h1 className="pl-4 md:p-0 text-3xl md:text-4xl font-weight-bolder mb-1 text-white whitespace-normal">{title}</h1>
+            <a href={'/movie/' + id}>
+                <h1 className="pl-4 md:p-0 text-3xl md:text-4xl font-weight-bolder mb-1 text-white whitespace-normal">{title}</h1>
+            </a>
             <div className="flex text-white pl-4 md:p-2">
                 <div className="w-1/2">
                     <h1 className="md:p-0 text-2xl md:text-3xl font-weight-bolder mb-1 text-orange-600 whitespace-normal">Cast</h1>

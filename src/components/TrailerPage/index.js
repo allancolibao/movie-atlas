@@ -12,7 +12,7 @@ function TrailerPage(props){
         <Backdrop movieDetails={props.movieDetails}/>
          <div className="container mt-2 md:mt-2 mx-auto z-20">
              <a  href={'/movie/' + id}>
-            <h1 className="p-2 md:p-0 text-3xl md:text-4xl font-weight-bolder mb-1 text-white whitespace-normal">{title}</h1>
+                <h1 className="p-2 md:p-0 text-3xl md:text-4xl font-weight-bolder mb-1 text-white whitespace-normal">{title}</h1>
             </a>
             <div className="flex flex-wrap">
                 {videos.length !== 0 ? videos.map((trailer, i) => 
