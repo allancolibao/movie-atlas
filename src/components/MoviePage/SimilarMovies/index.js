@@ -12,7 +12,7 @@ function SimilarMovies(props){
          <div className="container mb-4 mt-1 md:mt-6 mx-auto z-20">
             <h1 className="text-2xl md:text-4xl font-weight-bolder mb-1 text-orange-600 whitespace-normal">More like this</h1>
             <div className="flex flex-wrap">
-                {movies.slice(0, 12).map((movie, i) => 
+                {movies.length !== 0 ? movies.slice(0, 12).map((movie, i) => 
                     <div className="w-auto p-0 w-1/4 lg:w-1/6 cursor-pointer relative" key={i} >
                         <a href={'/movie/' + movie.id}>
                         <div className="overflow-hidden  shadow-lg">
@@ -32,7 +32,7 @@ function SimilarMovies(props){
                             </div>
                         </a>
                     </div>
-                )}
+                ) :  <h1 className="text-lg md:text-xl font-weight-bolder mb-1 text-white whitespace-normal">No similar movies found</h1>}
             </div>
         </div>
     </div>

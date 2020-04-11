@@ -5,13 +5,15 @@ import Backdrop from './Backdrop';
 function TrailerPage(props){
 
     const videos = props.videos;
-    const { title } = props.movieDetails;
+    const { title, id } = props.movieDetails;
 
     return (
-        <div className="flex h-full pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover ">
+        <div className={videos.length !== 0 ? "flex h-full pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover" : "flex h-screen pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover"}>
         <Backdrop movieDetails={props.movieDetails}/>
          <div className="container mt-2 md:mt-2 mx-auto z-20">
+             <a  href={'/movie/' + id}>
             <h1 className="p-2 md:p-0 text-3xl md:text-4xl font-weight-bolder mb-1 text-white whitespace-normal">{title}</h1>
+            </a>
             <div className="flex flex-wrap">
                 {videos.length !== 0 ? videos.map((trailer, i) => 
                     <div className="w-full p-2 w-1/1 lg:w-1/2 cursor-pointer" key={i} >
@@ -29,7 +31,7 @@ function TrailerPage(props){
                             </Iframe>
                         </div>
                     </div>
-                ) : <h1 className="text-orange-600 text-xl whitespace-normal">No found trailer/teaser for this movie.</h1>}
+                ) : <h1 className="text-orange-600 pl-2 text-xl whitespace-normal">No found trailer/teaser for this movie.</h1>}
             </div>
         </div>
         

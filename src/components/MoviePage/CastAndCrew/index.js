@@ -28,7 +28,7 @@ function CastAndCrew(props){
                         </div>
                     )}
                 </div>
-                <a  href={"/movie/full-cast-crew/" + props.castAndCrew.id}className="text-base md:text-lg font-weight-bolder text-orange-600 hover:text-orange-700 whitespace-normal">See Full Cast and Crew >></a>
+                <a  href={"/movie/full-cast-crew/" + props.castAndCrew.id}className="text-base md:text-lg font-weight-bolder text-gray-200 hover:text-gray-500 whitespace-normal">See Full Cast and Crew >></a>
             </div>
         </div>
     );   

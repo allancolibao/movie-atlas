@@ -4,7 +4,6 @@ import Moment from 'react-moment';
 
 function PersonPage(props){
 
-    console.log(props.movieCredits)
     const movies  = props.movieCredits.cast;
     const casts = props.movieCredits.cast;
     const crews = props.movieCredits.crew;
@@ -13,7 +12,7 @@ function PersonPage(props){
     const style = {backgroundColor: "#000000c4"};
     
     return(
-        <div className="flex w-full min-h-full bg-gray-900 bg-no-repeat bg-center bg-cover">
+        <div className="flex w-full min-h-full bg-black bg-no-repeat bg-center bg-cover">
             <div className="container mx-auto pt-2 pb-2 md:pt-8 md:pb-8">
                 <div className="w-full flex  z-20 text-gray-300">
                     <div className="w-1/2 md:w-1/4 pl-2 md:pl-0 pr-2 md:pr-6">
@@ -79,23 +78,23 @@ function PersonPage(props){
                         <div className="flex mt-4">
                             <div className="w-1/2">
                             <h2 className="text-lg md:text-2xl mt-2 mb-1">All Movies</h2>
-                                    {casts.map((cast, i) => 
+                                    {casts.length !== 0 ? casts.map((cast, i) => 
                                         <div key={i}>
                                             <a href={'/movie/' + cast.id}>
                                                 <h2 className="text-xs md:text-base mb-2 hover:text-gray-500">{cast.original_title}{' | '}{cast.character}</h2>
                                             </a>  
                                         </div>
-                                    )}
+                                    ) :  <h2 className="text-xs md:text-base mb-2 hover:text-gray-500">No result</h2>}
                             </div>
                             <div className="w-1/2 ml-2">
                             <h2 className="text-lg md:text-2xl mt-2 mb-1">Production</h2>
-                                    {crews.map((crew, i) => 
+                                    {crews.length !== 0 ? crews.map((crew, i) => 
                                         <div key={i}>
                                             <a href={'/movie/' + crew.id}>
                                             <h2 className="text-xs md:text-base mb-2 hover:text-gray-500">{crew.original_title}{' | '}{crew.job}</h2>
                                             </a>
                                         </div>
-                                    )}
+                                    ) : <h2 className="text-xs md:text-base mb-2 hover:text-gray-500">No result</h2>}
                             </div>
                         </div>
 

@@ -1,0 +1,7 @@
+body {
+    background-color: #000000;
+}
+
+.linear-gradient-overlay {
+    background-image: linear-gradient(#00000000, #000000);
+}
