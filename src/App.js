@@ -7,6 +7,7 @@ import Trailer from './pages/Trailer';
 import FullCastCrew from './pages/FullCastCrew';
 import Person from './pages/Person';
 import Footer from './components/Footer';
+import Search from './pages/Search';
 
 function App(){
     return(
@@ -18,6 +19,7 @@ function App(){
                     <Route exact path="/movie/trailer/:id" component={Trailer} />
                     <Route exact path="/movie/full-cast-crew/:id" component={FullCastCrew} />
                     <Route exact path="/person/:id" component={Person} />
+                    <Route exact path="/search" component={Search} />
                 <Footer/>
             </Router> 
         </React.Fragment>

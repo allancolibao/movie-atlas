@@ -32,7 +32,7 @@ function SimilarMovies(props){
                             </div>
                         </a>
                     </div>
-                ) :  <h1 className="text-lg md:text-xl font-weight-bolder mb-1 text-white whitespace-normal">No similar movies found</h1>}
+                ) :  <h1 className="text-lg md:text-xl mb-1 text-white whitespace-normal">No found result</h1>}
             </div>
         </div>
     </div>

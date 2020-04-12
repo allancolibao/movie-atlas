@@ -15,8 +15,6 @@ class FullCastCrew extends Component {
     }
   }
     componentDidMount(){
-
-      
       const movieId = this.props.match.params.id;
       const url = 'https://api.themoviedb.org/3/movie/';
 
@@ -25,7 +23,7 @@ class FullCastCrew extends Component {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer '+token
-      }
+        }
       }
       axios.all([
         axios.get(url + movieId, config),

@@ -3,10 +3,10 @@ import Moment from 'react-moment';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import ProgressProvider from "./ProgressProvider";
 
-function Overview(props){
-    const { title, vote_average,  release_date, overview, genre_ids, id } = props.overview;
-    const genresList = props.genre.genres;
-    const movieGenres = genre_ids;
+function Overview({content , genre}){
+
+    const { title, vote_average,  release_date, overview, genre_ids, id } = content;
+    const genresList = genre.genres;
     const rating = vote_average * 10;
     const styles = {
           path: {
@@ -26,7 +26,8 @@ function Overview(props){
             fill: '#ffffff',
             fontSize: '1.7rem',
           },
-      }
+    }
+
     return (
         <div className="w-auto z-20 md:w-1/2 text-white relative md:flex flex-col lg:mt-16 lg:mb-8 pr-4">
             <h1 className="text-4xl md:text-5xl mt-4 font-weight-bolder mb-0 whitespace-normal">{title}</h1>
@@ -42,7 +43,7 @@ function Overview(props){
                 <h2 className="sm:text-2xl text-base">
                     <Moment format="MM/DD/YYYY" date={release_date} />
                     <span className="rounded-full bg-gray-500 h-2 w-2 mx-1 inline-block"></span>
-                    {movieGenres.map((movieGenre, key) => { return genresList.filter(genreList => genreList.id === movieGenre ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
+                    {genre_ids.map((movieGenre, key) => { return genresList.filter(genreList => genreList.id === movieGenre ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
                 </h2>
               </div>
             </div>

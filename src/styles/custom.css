@@ -1,7 +1,26 @@
+/* Global background color */
 body {
     background-color: #000000;
 }
 
+/* For backdrop overlay */
 .linear-gradient-overlay {
     background-image: linear-gradient(#00000000, #000000);
+}
+
+/*Custom scroll Bar */
+::-webkit-scrollbar {
+    width: .7vmin;
+  }
+  
+::-webkit-scrollbar-track {
+box-shadow: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #dd6b20;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #d16219;
 }
