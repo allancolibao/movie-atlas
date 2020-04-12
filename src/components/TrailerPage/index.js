@@ -7,7 +7,7 @@ function TrailerPage({videos, movieDetails}){
     const { title, id } = movieDetails;
 
     return (
-        <div className={videos.length !== 0 ? "flex h-full pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover" : "flex h-screen pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover"}>
+        <div className="flex h-full pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover">
         <Backdrop movieDetails={movieDetails}/>
          <div className="container mt-2 md:mt-2 mx-auto z-20">
              <a  href={'/movie/' + id}>
