@@ -1,5 +1,6 @@
 import React from 'react';
 import {  BrowserRouter as Router, Route } from "react-router-dom";
+import ReactGA from 'react-ga';
 import NavBar from './components/Navbar';
 import Home from './pages/Home';
 import Movie from './pages/Movie';
@@ -8,6 +9,13 @@ import FullCastCrew from './pages/FullCastCrew';
 import Person from './pages/Person';
 import Footer from './components/Footer';
 import Search from './pages/Search';
+
+
+// Initialize google analytics
+const gaId = process.env.REACT_APP_GA_ID;
+ReactGA.initialize(gaId);
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 function App(){
     return(

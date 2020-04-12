@@ -1,20 +1,20 @@
 {
-  "short_name": "Movie App",
-  "name": "React Movie App",
+  "short_name": "Movie Atlas",
+  "name": "The Movie Atlas",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "logo-2.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "movie-app.png",
+      "src": "logo-2.png",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#d16219",
+  "background_color": "#000000"
 }
