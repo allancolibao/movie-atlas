@@ -6,7 +6,6 @@ import ProgressProvider from "./ProgressProvider";
 function Overview({content , genre}){
 
     const { title, vote_average,  release_date, overview, genre_ids, id } = content;
-    const genresList = genre.genres;
     const rating = vote_average * 10;
     const styles = {
           path: {
@@ -43,7 +42,7 @@ function Overview({content , genre}){
                 <h2 className="sm:text-2xl text-base">
                     <Moment format="MM/DD/YYYY" date={release_date} />
                     <span className="rounded-full bg-gray-500 h-2 w-2 mx-1 inline-block"></span>
-                    {genre_ids.map((movieGenre, key) => { return genresList.filter(genreList => genreList.id === movieGenre ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
+                    {genre_ids.map((movieGenre, key) => { return genre.filter(genreList => genreList.id === movieGenre ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
                 </h2>
               </div>
             </div>

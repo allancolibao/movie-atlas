@@ -5,6 +5,14 @@ const resources = {};
 const makeRequestCreator = () => {
   let cancel;
 
+  const token = process.env.REACT_APP_ACCESS_TOKEN;
+      const config =  {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer '+token
+    }
+  }
+
   return async query => {
     if (cancel) {
       cancel.cancel();
@@ -15,7 +23,7 @@ const makeRequestCreator = () => {
       if (resources[query]) {
         return resources[query];
       }
-      const res = await axios(query, { cancelToken: cancel.token });
+      const res = await axios(query, config, { cancelToken: cancel.token });
 
       const result = res.data.results;
       resources[query] = result;
@@ -23,9 +31,9 @@ const makeRequestCreator = () => {
       return result;
     } catch (error) {
       if (axios.isCancel(error)) {
-        console.log('Request canceled', error.message);
+        // Logging error message
       } else {
-        console.log('Something went wrong: ', error.message);
+        // Logging error message
       }
     }
   };

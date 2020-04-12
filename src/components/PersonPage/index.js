@@ -2,13 +2,11 @@ import React from 'react';
 import Moment from 'react-moment';
 
 
-function PersonPage(props){
+function PersonPage({movieCredits, genre, personDetails}){
 
-    const movies  = props.movieCredits.cast;
-    const casts = props.movieCredits.cast;
-    const crews = props.movieCredits.crew;
-    const { profile_path, name, biography, known_for_department, birthday, place_of_birth, also_known_as, homepage} = props.personDetails;
-    const genresList = props.genre.genres;
+    const movies  = movieCredits.cast;
+    const crews = movieCredits.crew;
+    const { profile_path, name, biography, known_for_department, birthday, place_of_birth, also_known_as, homepage} = personDetails;
     const style = {backgroundColor: "#000000c4"};
     
     return(
@@ -17,7 +15,7 @@ function PersonPage(props){
                 <div className="w-full flex  z-20 text-gray-300">
                     <div className="w-1/2 md:w-1/4 pl-2 md:pl-0 pr-2 md:pr-6">
                         <div className="shadow-lg">
-                            <img className="object-cover w-auto rounded" src={profile_path ? 'https://image.tmdb.org/t/p/w500' + profile_path : process.env.PUBLIC_URL + '/img/movie-alt.jpg'} alt="Movie cover"/>
+                            <img className="object-cover w-auto rounded" src={profile_path ? 'https://image.tmdb.org/t/p/w500' + profile_path : process.env.PUBLIC_URL + '/img/alt-2.jpg'} alt="Movie cover"/>
                         </div>
                         <div className="pt-2 pl-2 md:pt-4">
                             <a  href={homepage} className="text-base md:text-xl"><i className="fa fa-link"></i></a>  
@@ -65,7 +63,7 @@ function PersonPage(props){
                                                 <h2 className="text-sm">
                                                     {movie.vote_average * 10 +'%'}{" | "} 
                                                     <Moment format="MM/DD/YYYY" date={movie.release_date} />{" | "} 
-                                                    {movie.genre_ids.map((movieGenre, key) => { return genresList.filter(genreList => genreList.id === movieGenre ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
+                                                    {movie.genre_ids.map((movieGenre, key) => { return genre.filter(genreList => genreList.id === movieGenre ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
                                                 </h2>
                                             </div>
                                         </div>
@@ -78,7 +76,7 @@ function PersonPage(props){
                         <div className="flex mt-4">
                             <div className="w-1/2">
                             <h2 className="text-lg md:text-2xl mt-2 mb-1">All Movies</h2>
-                                    {casts.length !== 0 ? casts.map((cast, i) => 
+                                    {movies.length !== 0 ? movies.map((cast, i) => 
                                         <div key={i}>
                                             <a href={'/movie/' + cast.id}>
                                                 <h2 className="text-xs md:text-base mb-2 hover:text-gray-500">{cast.original_title}{' | '}{cast.character}</h2>

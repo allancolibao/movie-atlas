@@ -14,7 +14,7 @@ function Results({ movies }){
                     <div className="w-auto p-1 w-1/4 lg:w-1/6 cursor-pointer relative" key={i} >
                         <a href={'/movie/' + movie.id}>
                         <div className="overflow-hidden  shadow-lg">
-                            <img className="w-full" src={movie.poster_path ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path : process.env.PUBLIC_URL + '/img/movie-alt.jpg'} alt="Movie Cover"/>
+                            <img className="w-full" src={movie.poster_path ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path : process.env.PUBLIC_URL + '/img/movie-alt-2.jpg'} alt="Movie Cover"/>
                         </div>
                         <div className="overlay hidden md:block absolute top-0 bottom-0 right-0 left-0 w-full h-full opacity-0  transition duration-500 ease-in-out hover:opacity-100" style={style}>
                             <div className="text-white p-5 opacity-100">

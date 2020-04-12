@@ -3,11 +3,9 @@ import Moment from 'react-moment';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import ProgressProvider from "./ProgressProvider";
 
-function Overview(props){
+function Overview({content, genre}){
 
-    const { title, vote_average,  release_date, overview, genres, id } = props.overview;
-    const genresList = props.genre.genres;
-    const movieGenres = genres;
+    const { title, vote_average,  release_date, overview, genres, id } = content;
     const rating = vote_average * 10;
     const styles = {
           path: {
@@ -43,7 +41,7 @@ function Overview(props){
                 <h2 className="sm:text-2xl text-base">
                     <Moment format="MM/DD/YYYY" date={release_date} />
                     <span className="rounded-full bg-gray-500 h-2 w-2 mx-1 inline-block"></span>
-                    {movieGenres.map((movieGenre, key) => { return genresList.filter(genreList => genreList.id === movieGenre.id ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
+                    {genres.map((movieGenre, key) => { return genre.filter(genreList => genreList.id === movieGenre.id ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
                 </h2>
               </div>
             </div>

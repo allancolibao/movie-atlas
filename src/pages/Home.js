@@ -31,7 +31,7 @@ class Home extends Component {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer '+token
-      }
+        }
       }
       axios.all([
         axios.get(url + '/popular', config),
@@ -46,7 +46,7 @@ class Home extends Component {
             nowPlaying : nowPlayingRes.data.results,  
             topRated : topRatedRes.data.results,  
             upcomingMovies : upcomingMoviesRes.data.results,
-            genre : genreList.data,
+            genre : genreList.data.genres,
             isLoading: true
           });
       })).catch(error =>{

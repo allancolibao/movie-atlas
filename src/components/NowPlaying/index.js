@@ -1,11 +1,9 @@
 import React from 'react';
 import Moment from 'react-moment';
 
-function NowPlaying(props){
+function NowPlaying({movies , genre}){
   
-    const movies = props.movies;
     const style = {backgroundColor: "#000000c4"};
-    const genresList = props.genre.genres;
 
     return (
     <div className="flex min-h-full bg-black bg-no-repeat bg-center bg-cover p-2 md:p-0">
@@ -24,7 +22,7 @@ function NowPlaying(props){
                                 <h2 className="text-sm">
                                     {movie.vote_average * 10 +'%'}{" | "} 
                                     <Moment format="MM/DD/YYYY" date={movie.release_date} />{" | "} 
-                                    {movie.genre_ids.map((movieGenre, key) => { return genresList.filter(genreList => genreList.id === movieGenre ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
+                                    {movie.genre_ids.map((movieGenre, key) => { return genre.filter(genreList => genreList.id === movieGenre ).map(genreList => { return (key ? ', ' : '') + genreList.name })})}
                                 </h2>
                             </div>
                         </div>

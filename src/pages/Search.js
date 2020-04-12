@@ -10,11 +10,9 @@ class Search extends Component{
     };
 
     search = async val => {
-      const token = process.env.REACT_APP_ACCESS_TOKEN_V3;
       this.setState({ loading: true });
-      const results = await search(
-        `https://api.themoviedb.org/3/search/movie?query=${val}&api_key=${token}`
-      );
+      const url = 'https://api.themoviedb.org/3/search/movie?query='
+      const results = await search(url + val);
       const movies = results;
       this.setState({ movies, loading: false });
     };
@@ -43,8 +41,7 @@ class Search extends Component{
                     type="text" 
                     value={this.state.value}
                     onChange={e => this.onChangeHandler(e)}
-                    placeholder="Search for a movie..." />   
-                    
+                    placeholder="Search for a movie..." />                     
             </div>
             {this.renderMovies}
         </React.Fragment>

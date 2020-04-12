@@ -38,6 +38,9 @@ function Footer(){
                             <li className="hover:text-blue text-grey-darker">
                                 <a href="https://fontawesome.com/">Font Awesome</a>
                             </li>
+                            <li className="hover:text-blue text-grey-darker">
+                                <a href="https://alligator.io/react/live-search-with-axios/">React Live Search</a>
+                            </li>
                         </ul>
                     </div>
                     <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">

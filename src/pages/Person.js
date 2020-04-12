@@ -17,7 +17,6 @@ class Person extends Component {
     }
       componentDidMount(){
   
-        
         const personId = this.props.match.params.id;
         const url = 'https://api.themoviedb.org/3/person/';
         const genreUrl = 'https://api.themoviedb.org/3/genre/movie/list';
@@ -38,7 +37,7 @@ class Person extends Component {
             this.setState({ 
               personDetails : personRes.data, 
               movieCredits : movieCreditsRes.data, 
-              genre : genreList.data,
+              genre : genreList.data.genres,
               isLoading: true
             });
         })).catch(error =>{

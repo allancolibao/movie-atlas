@@ -3,14 +3,13 @@ import Movie from './Movie';
 import CastAndCrew from './CastAndCrew';
 import SimilarMovies from './SimilarMovies';
 
-function MovieDetails(props){
-
+function MovieDetails({movieDetails, castAndCrew, similarMovies , videos, genre}){
 
     return (
         <React.Fragment>
-            <Movie movieDetails={props.movieDetails} genre={props.genre} videos={props.videos}/>
-            <CastAndCrew castAndCrew={props.castAndCrew}/>
-            <SimilarMovies similarMovies={props.similarMovies} genre={props.genre}/>
+            <Movie movieDetails={movieDetails} genre={genre} videos={videos}/>
+            <CastAndCrew castAndCrew={castAndCrew}/>
+            <SimilarMovies similarMovies={similarMovies} genre={genre}/>
         </React.Fragment>
     );    
 }

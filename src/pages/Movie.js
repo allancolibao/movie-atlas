@@ -41,7 +41,7 @@ class MoviePage extends Component {
             movieDetails : movieRes.data, 
             similarMovies : similarRes.data.results, 
             castAndCrew : castAndCrewRes.data, 
-            genre : genreList.data,
+            genre : genreList.data.genres,
             isLoading: true
           });
       })).catch(error =>{

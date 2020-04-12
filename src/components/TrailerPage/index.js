@@ -2,14 +2,13 @@ import React from 'react';
 import Iframe from 'react-iframe'
 import Backdrop from './Backdrop';
 
-function TrailerPage(props){
+function TrailerPage({videos, movieDetails}){
 
-    const videos = props.videos;
-    const { title, id } = props.movieDetails;
+    const { title, id } = movieDetails;
 
     return (
         <div className={videos.length !== 0 ? "flex h-full pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover" : "flex h-screen pb-0 md:pb-6 lg:pb-8 bg-black bg-no-repeat bg-center bg-cover"}>
-        <Backdrop movieDetails={props.movieDetails}/>
+        <Backdrop movieDetails={movieDetails}/>
          <div className="container mt-2 md:mt-2 mx-auto z-20">
              <a  href={'/movie/' + id}>
                 <h1 className="p-2 md:p-0 text-3xl md:text-4xl font-weight-bolder mb-1 text-white whitespace-normal">{title}</h1>
