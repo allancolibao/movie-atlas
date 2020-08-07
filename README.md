@@ -4,5 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About this Application
 
-The Movie Atlas provides movies information from The Movie Database (TMDb) API
+The Movie Atlas provides movie information from The Movie Database (TMDb) API
+
+Thank you!
+
+@arcdev
+
+See [My Portfolio](https://arcdev.me).
 
