@@ -7,7 +7,7 @@ function Footer(){
             <div className="container mt-4 mb-8 md:mb-20 mx-auto z-20 border-t-2 border-gray-900 pt-2 md:pt-6">
                 <div className="sm:flex mb-4">
                     <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">
-                        <h1 className="text-gray-400 mb-2">Visit me</h1>
+                        <h1 className="text-gray-400 mb-2">Follow me</h1>
                         <ul className="list-reset leading-normal">
                             <li className="hover:text-blue text-grey-darker">
                                 <a href="https://arcdev.me/"><i className="fa fa-globe"></i> Portfolio</a>
@@ -56,7 +56,7 @@ function Footer(){
                         <p className="text-grey-darker leading-normal"></p>
                         <a href="https://www.themoviedb.org/">
                             <div className="mt-4 flex">
-                                <img className="w-auto" src={process.env.PUBLIC_URL + '/img/tmdb.svg'} alt="Movie Cover"/>
+                                <img className="w-5/12" src={process.env.PUBLIC_URL + '/img/tmdb.svg'} alt="Movie Cover"/>
                             </div>
                         </a>
                     </div>
@@ -67,7 +67,7 @@ function Footer(){
             <div className="border-t-2 border-gray-900 flex flex-col items-center">
                 <div className="sm:w-2/3 z-20 text-center py-6">
                     <p className="text-sm text-orange-600 font-bold mb-2">
-                       Made with ❤ by Allan Colibao | 2020
+                       {`Made with ❤ by Allan Colibao | ${(new Date().getFullYear())}`}
                     </p>
                 </div>
             </div>
